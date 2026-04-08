@@ -19,23 +19,10 @@ jobs:
       
       - name: Build et Push
         run: |
-          docker build -t davidbekale/mon-image .
-          docker push davidbekale/mon-image
-          
-  build-and-push:
-    runs-on: ubuntu-latest
-    
-    steps:
-      - name: tata
-        uses: actions/checkout@v4
-      
-      - name: Login Docker Hub
-        uses: docker/login-action@v2
-        with:
-          username: ${{ secrets.DOCKER_USERNAME2 }}
-          password: ${{ secrets.DOCKER_PASSWORD2 }}
+          docker build -t davidbekale/TP-DOCKER/api/davidbekale/mon-api:latest 
+          docker push davidbekale/TP-DOCKER/api/davidbekale/mon-api:latest
       
       - name: Build et Push
         run: |
-          docker build -t davidbekale/mon-app .
-          docker push davidbekale/mon-app
+          docker build -t davidbekale/TP-DOCKER/front/davidbekale/mon-image:latest 
+          docker push davidbekale/TP-DOCKER/front/davidbekale/mon-image:latest
