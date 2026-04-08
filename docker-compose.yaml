@@ -1,0 +1,11 @@
+services:
+  mon-api:
+    image: davidbekale/mon-api:latest
+    ports:
+      - "40222:1994"
+
+  mon-image: 
+    image: davidbekale/mon-image:latest
+    ports:
+      - "40212:5173"
+
